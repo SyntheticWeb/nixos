@@ -1,0 +1,35 @@
+live_config_reload = true
+
+import = [
+    "~/.config/alacritty/themes/themes/tokyo-night.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+dynamic_padding = false
+opacity = 0.8
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "FiraCode Nerd Font Mono"
+style = "Heavy"
+
+[font.bold_italic]
+family = "FiraCode Nerd Font Mono"
+style = "Heavy Italic"
+
+[font.italic]
+family = "FiraCode Nerd Font Mono"
+style = "Medium Italic"
+
+[font.normal]
+family = "FiraCode Nerd Font Mono"
+style = "Medium"
+
+[window.padding]
+x = 10
+y = 5
