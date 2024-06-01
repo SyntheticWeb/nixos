@@ -80,6 +80,7 @@
     zip
     unzip
     fastfetch
+    nmap
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

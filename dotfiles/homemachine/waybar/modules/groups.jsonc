@@ -1,0 +1,21 @@
+{
+  "group/systray": {
+    "orientation": "horizontal",
+    "modules": ["tray", "power-profiles-daemon"],
+  },
+  "group/end-right-module": {
+    "orientation": "horizontal",
+    "modules": [
+      "clock",
+      "cpu",
+      "memory"
+    ],
+  },
+  "group/end-left-module" : {
+    "orientation": "horizontal",
+    "modules": [
+      "pulseaudio",
+      "temperature"
+    ],
+  },
+}
