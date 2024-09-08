@@ -14,6 +14,7 @@ in
 
         environment.systemPackages = with pkgs; [
             mangohud
+            gamemode
         ];
 
         programs.gamemode.enable = true;

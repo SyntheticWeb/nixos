@@ -1,18 +1,16 @@
 {lib, config, pkgs, ...}:
 
 let
-  cfg = config.rust;
+  cfg = config.go;
 in
 {
-    options.rust = {
-        enable = lib.mkEnableOption "enable rust";
+    options.go = {
+        enable = lib.mkEnableOption "enable go";
     };
 
     config = lib.mkIf cfg.enable {
         environment.systemPackages = with pkgs; [
-            rustup
-            cargo
-            rustc
+            go
         ];
     };
 }

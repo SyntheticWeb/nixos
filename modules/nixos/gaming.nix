@@ -7,9 +7,9 @@
         ./gaming/moonlight.nix
     ];
 
-    nvidia.enable = lib.mkDefault true;
-    steam.enable = lib.mkDefault true;
-    proton.enable = lib.mkDefault true;
-    discord.enable = lib.mkDefault true;
-    moonlight.enable = lib.mkDefault true;
+    nvidia.enable = lib.mkDefault false;
+    steam.enable = lib.mkDefault false;
+    proton.enable = lib.mkDefault false;
+    discord.enable = lib.mkDefault false;
+    moonlight.enable = lib.mkDefault false;
 }

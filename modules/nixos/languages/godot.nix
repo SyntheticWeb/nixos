@@ -1,18 +1,16 @@
 {lib, config, pkgs, ...}:
 
 let
-  cfg = config.rust;
+  cfg = config.godot;
 in
 {
-    options.rust = {
-        enable = lib.mkEnableOption "enable rust";
+    options.godot = {
+        enable = lib.mkEnableOption "enable godot";
     };
 
     config = lib.mkIf cfg.enable {
         environment.systemPackages = with pkgs; [
-            rustup
-            cargo
-            rustc
+            godot_4
         ];
     };
 }

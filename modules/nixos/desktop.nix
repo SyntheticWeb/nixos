@@ -6,7 +6,7 @@
     ];
 
     xfcei3.enable = lib.mkDefault false;
-    hyprland.enable = lib.mkDefault true;
+    hyprland.enable = lib.mkDefault false;
     gnome.enable = lib.mkDefault false;
 
 }

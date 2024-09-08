@@ -53,11 +53,18 @@
   users.users.rtsnow = {
     isNormalUser = true;
     description = "Ryan Snow";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "tss"];
     packages = with pkgs; [
     #  thunderbird
     ];
   };
+
+  security.tpm2.enable = true;
+  security.tpm2.pkcs11.enable = true;
+  security.tpm2.tctiEnvironment.enable = true;
+  services.tcsd.enable = true;
+
+
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -81,7 +88,55 @@
     unzip
     fastfetch
     nmap
+    busybox
+    htop
+    tpm2-tools
+    tpm2-abrmd
   ];
+
+
+  # Enable desired modules:
+
+  # Audio 
+  pipewire.enable = true;
+  noisetorch.enable = true;
+  
+  # Desktops - ONLY 1 SHOULD BE ENABLED
+  xfcei3.enable = false;
+  hyprlaand.enable = true;
+  gnome.enable = false;
+
+  # Editors
+  vscode.enable = true;
+  obsidian.enable = true;
+  nixvim.enable = true;
+
+  # Fonts
+  nerdfonts.enable = true;
+
+  # Gaming
+  nvidia.enable = true;
+  steam.enable = true;
+  proton.enable = true;
+  discord.enable = true;
+  moonlight.enable = true;
+
+  # Git and git related
+  gpg.enable = true;
+
+  # Code Languages
+  rust.enable = true; 
+  crelated.enable = true;
+  godot.enable = true;
+  go.enable = true;
+
+  # Shell
+  zsh.enable = true;
+
+  # Terminal
+  alacritty.enable = true;
+  tmux.enable = true;
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

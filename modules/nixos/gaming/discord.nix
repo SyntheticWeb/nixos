@@ -11,8 +11,14 @@ in
     config = lib.mkIf cfg.enable {
 
         environment.systemPackages = with pkgs; [
-            discord-canary
+            (discord.override {
+                withOpenASAR = true;
+                withVencord = true;
+            })           
+            vesktop
         ];
+
+
 
     };
 }

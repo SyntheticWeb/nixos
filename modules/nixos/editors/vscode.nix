@@ -16,6 +16,7 @@ in
                     tamasfe.even-better-toml
                     vscodevim.vim
                     rust-lang.rust-analyzer
+                    golang.go
                     enkia.tokyo-night
                 ];
             })

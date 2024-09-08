@@ -8,14 +8,15 @@
     "modules": [
       "clock",
       "cpu",
-      "memory"
+      "memory",
+      "temperature"
     ],
   },
   "group/end-left-module" : {
     "orientation": "horizontal",
     "modules": [
       "pulseaudio",
-      "temperature"
+      "mpris"
     ],
   },
 }

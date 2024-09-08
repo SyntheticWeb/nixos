@@ -23,6 +23,9 @@ in
             powerOnBoot = true;
         };
 
+
+        xdg.portal.enable = true;
+
         # Enable Bluetooth support
         services.blueman.enable = true;
 
@@ -70,6 +73,7 @@ in
             wlr-randr
             wlsunset
             qt5ct
+            vlc
 
             libsForQt5.gwenview
             dunst # notifications
