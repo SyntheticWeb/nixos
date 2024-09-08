@@ -103,7 +103,7 @@
   
   # Desktops - ONLY 1 SHOULD BE ENABLED
   xfcei3.enable = false;
-  hyprlaand.enable = true;
+  hyprland.enable = true;
   gnome.enable = false;
 
   # Editors
