@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -53,9 +54,9 @@
   users.users.rtsnow = {
     isNormalUser = true;
     description = "Ryan Snow";
-    extraGroups = [ "networkmanager" "wheel" "audio" "tss"];
+    extraGroups = [ "networkmanager" "wheel" "audio" "tss" ];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -73,7 +74,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # Enable Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -100,7 +101,7 @@
   # Audio 
   pipewire.enable = true;
   noisetorch.enable = true;
-  
+
   # Desktops - ONLY 1 SHOULD BE ENABLED
   xfcei3.enable = false;
   hyprland.enable = true;
@@ -108,8 +109,9 @@
 
   # Editors
   vscode.enable = true;
-  obsidian.enable = true;
-  nixvim.enable = true;
+  obsidian.enable = false;
+  nixvim.enable = false;
+  lazyvim.enable= true;
 
   # Fonts
   nerdfonts.enable = true;
@@ -120,12 +122,13 @@
   proton.enable = true;
   discord.enable = true;
   moonlight.enable = true;
+  thunderstore.enable = true;
 
   # Git and git related
   gpg.enable = true;
 
   # Code Languages
-  rust.enable = true; 
+  rust.enable = true;
   crelated.enable = true;
   godot.enable = true;
   go.enable = true;
@@ -137,6 +140,11 @@
   alacritty.enable = true;
   tmux.enable = true;
 
+  # video
+  webcamoid.enable = true;
+  obs.enable = true;
+
+  programs.nix-ld.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
